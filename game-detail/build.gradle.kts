@@ -39,17 +39,23 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(project(":game-api"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.glide)
+    implementation(libs.fastadapter)
+    implementation(libs.fastadapter.utils)
 
     kapt(libs.dagger.compiler)
 
     implementation(project(":base"))
     implementation(project(":core-api"))
+    implementation(project(":uikit"))
     api(project(":game-detail-api"))
+
+
 }

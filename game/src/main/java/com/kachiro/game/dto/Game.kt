@@ -1,4 +1,4 @@
-package com.kachiro.game_api.dto
+package com.kachiro.game.dto
 
 data class Game(
     val id: Int,

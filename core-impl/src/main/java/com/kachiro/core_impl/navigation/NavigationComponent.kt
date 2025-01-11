@@ -1,4 +1,4 @@
-package com.kachiro.core_impl.di
+package com.kachiro.core_impl.navigation
 
 import com.kachiro.core_api.di.NavigateProvide
 import dagger.Component

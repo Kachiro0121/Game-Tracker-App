@@ -1,11 +1,12 @@
 package com.kachiro.game_detail.di
 
 import com.kachiro.core_api.di.ApplicationComponentProvider
-import com.kachiro.game_detail.GameDetailDialog
+import com.kachiro.game_detail.GameDetailFragment
 import dagger.Component
 
+
 @Component(
-    modules = [GameDetailModule::class],
+    modules = [GameDetailModule::class, ManagerGalleryModule::class, ManagerInfoModule::class],
     dependencies = [ApplicationComponentProvider::class]
 )
 interface GameDetailComponent {
@@ -18,6 +19,6 @@ interface GameDetailComponent {
         }
     }
 
-    fun inject(gameDetailFragment: GameDetailDialog)
+    fun inject(gameDetailFragment: GameDetailFragment)
 
 }

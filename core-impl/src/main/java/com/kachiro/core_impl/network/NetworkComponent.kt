@@ -1,4 +1,4 @@
-package com.kachiro.core_impl.di
+package com.kachiro.core_impl.network
 
 import com.kachiro.core_api.network.NetworkProvider
 import dagger.Component

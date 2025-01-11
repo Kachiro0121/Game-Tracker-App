@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary1">#6C62E5</color>
+    <color name="primary2">#A3B4F9</color>
+    <color name="background_dark">#060616</color>
+    <color name="button_dark">#2D2D34</color>
+    <color name="icon_color">#DBDEFC</color>
+    <color name="gray">#E3E7EB</color>
+    <color name="green">#DFEF15</color>
+    <color name="green2">#78BE09</color>
+    <color name="orange">#FFB535</color>
+    <color name="rad">#FB6902</color>
+    <color name="rad2">#FC6C58</color>
+    <color name="rad3">#FC4842</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="background_black">#1E1E1E</color>
+</resources>

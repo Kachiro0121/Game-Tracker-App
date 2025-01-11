@@ -37,6 +37,5 @@ dependencies {
     api(project(":core-api"))
     implementation(libs.dagger.android)
     implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
     kapt(libs.dagger.compiler)
 }

@@ -1,10 +1,7 @@
-package com.kachiro.game
+package com.kachiro.game.repository
 
-import com.kachiro.game.adapter.GroupItem
-import com.kachiro.game_api.GameApiService
-import com.kachiro.game_api.GameRepository
-import com.kachiro.game_api.dto.Game
-import com.kachiro.game_api.dto.GameCategory
+import com.kachiro.game.dto.Game
+import com.kachiro.game.dto.GameCategory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -13,7 +10,8 @@ import kotlinx.coroutines.withContext
 
 import javax.inject.Inject
 
-class GameRepositoryImpl @Inject constructor(private val apiService: GameApiService) : GameRepository {
+class GameRepositoryImpl @Inject constructor(private val apiService: GameApiService) :
+    GameRepository {
 
     override suspend fun getAllGames(): List<Game> {
         return withContext(Dispatchers.IO) {

@@ -46,8 +46,7 @@ class HomeFragment: BaseFragment<HomeScreenBinding>() {
         binding.mainNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> viewModel.gameScreen()
-                R.id.navigation_dashboard -> viewModel.gameScreen()
-                R.id.navigation_notifications -> viewModel.gameScreen()
+                R.id.navigation_catalog -> viewModel.gameScreen()
                 else -> false
             }
             true

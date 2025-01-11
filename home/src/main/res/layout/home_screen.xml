@@ -16,6 +16,7 @@
         android:id="@+id/mainNavigationView"
         android:layout_width="match_parent"
         android:layout_height="54dp"
+        app:labelVisibilityMode="unlabeled"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/bottom_nav_menu" />
 

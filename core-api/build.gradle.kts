@@ -1,5 +1,3 @@
-import org.gradle.internal.impldep.bsh.commands.dir
-
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -39,4 +37,6 @@ dependencies {
     api(libs.dagger.android)
     api(libs.androidx.navigation)
     api(libs.cicerone.navigation)
+    api(libs.retrofit.converter.gson)
+    api(libs.okhttp.logging)
 }

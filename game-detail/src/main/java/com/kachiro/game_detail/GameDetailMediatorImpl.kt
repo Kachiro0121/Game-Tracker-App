@@ -9,10 +9,10 @@ class GameDetailMediatorImpl @Inject constructor(
     private val router: Router
 ) : GameDetailMediator {
 
-    private val detailGame = FragmentScreen{ GameDetailDialog.newInstance() }
+    private fun detailGame(id: Int) = FragmentScreen("GameId_$id"){ GameDetailFragment.newInstance(id) }
 
     override fun openScreenDetailGame(id: Int) {
-        router.navigateTo(detailGame)
+        router.navigateTo(detailGame(id))
     }
 
 }

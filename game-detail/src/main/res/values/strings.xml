@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="none">none</string>
+    <string name="developer">Developer</string>
+    <string name="genre">Genre</string>
+    <string name="publisher">Publisher</string>
+    <string name="releaseDate">Release date</string>
+    <string name="gallery">Gallery</string>
+    <string name="open_game">open game</string>
+</resources>

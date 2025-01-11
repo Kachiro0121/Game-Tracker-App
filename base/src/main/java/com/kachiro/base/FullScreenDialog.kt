@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import androidx.annotation.Px
 import androidx.core.view.updateLayoutParams
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.withCreated
 import androidx.viewbinding.ViewBinding

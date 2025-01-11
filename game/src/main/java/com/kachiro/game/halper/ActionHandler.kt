@@ -1,4 +1,4 @@
-package com.kachiro.game_api
+package com.kachiro.game.halper
 
 interface ActionHandler {
     fun openDetail(id: Int)

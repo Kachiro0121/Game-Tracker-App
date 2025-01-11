@@ -1,6 +1,5 @@
 package com.kachiro.game.halper
 
-import com.kachiro.game_api.ActionHandler
 import com.kachiro.game_detail_api.GameDetailMediator
 import javax.inject.Inject
 

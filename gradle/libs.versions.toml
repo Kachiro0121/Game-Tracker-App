@@ -15,6 +15,7 @@ glide = "4.16.0"
 fastadapter = "5.7.0"
 navigation = "2.8.0"
 cicerone-navigation = "7.1"
+okhttp-logging = "4.12.0"
 
 [libraries]
 
@@ -43,6 +44,9 @@ dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", versi
 #retrofit
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+#okhttp
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp-logging" }
 
 #glide
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }

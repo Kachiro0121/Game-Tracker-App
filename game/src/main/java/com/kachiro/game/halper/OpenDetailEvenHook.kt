@@ -1,11 +1,9 @@
 package com.kachiro.game.halper
 
 import android.view.View
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kachiro.game.adapter.GameCardItem
 import com.kachiro.game.adapter.GameCardRecommendItem
-import com.kachiro.game_api.ActionHandler
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.GenericItem
 import com.mikepenz.fastadapter.listeners.ClickEventHook

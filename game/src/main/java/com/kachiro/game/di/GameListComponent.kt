@@ -2,11 +2,7 @@ package com.kachiro.game.di
 
 import com.kachiro.core_api.di.ApplicationComponentProvider
 import com.kachiro.game.GameListFragment
-import com.kachiro.game_api.GameListMediator
-import dagger.BindsInstance
 import dagger.Component
-import dagger.Subcomponent
-import javax.inject.Singleton
 
 @Component(
     modules = [GameListModule::class, ManagerListModule::class],

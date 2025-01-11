@@ -8,8 +8,8 @@ import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.kachiro.base.dp
 import com.kachiro.game.R
 import com.kachiro.game.databinding.GroupItemBinding
+import com.kachiro.game.dto.GameCategory
 import com.kachiro.game.dto.TypeItem
-import com.kachiro.game_api.dto.GameCategory
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.GenericItem
 import com.mikepenz.fastadapter.adapters.FastItemAdapter

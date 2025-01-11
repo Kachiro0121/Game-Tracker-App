@@ -1,10 +1,10 @@
 package com.kachiro.game.di
 
 import androidx.lifecycle.ViewModelProvider
-import com.kachiro.game.GameRepositoryImpl
+import com.kachiro.game.repository.GameApiService
+import com.kachiro.game.repository.GameRepository
+import com.kachiro.game.repository.GameRepositoryImpl
 import com.kachiro.game.viewModels.GameViewModelFactory
-import com.kachiro.game_api.GameApiService
-import com.kachiro.game_api.GameRepository
 import com.kachiro.game_detail_api.GameDetailMediator
 import dagger.Binds
 import dagger.Module
@@ -19,7 +19,7 @@ interface GameListModule {
     fun bindViewModelFactory(factory: GameViewModelFactory): ViewModelProvider.Factory
 
     @Binds
-    fun bindGameRepository(gameProvider: GameRepositoryImpl): GameRepository
+    fun bindRepository(repository: GameRepositoryImpl): GameRepository
 
     companion object{
 
