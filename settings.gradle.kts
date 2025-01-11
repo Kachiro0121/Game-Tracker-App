@@ -10,6 +10,7 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -21,3 +22,16 @@ dependencyResolutionManagement {
 
 rootProject.name = "gameTrackerApp"
 include(":app")
+include(":core-api")
+include(":core-impl")
+include(":core-factory")
+
+include(":main")
+include(":home")
+include(":game")
+include(":game-api")
+include(":base")
+include(":home-api")
+include(":uikit")
+include(":game-detail")
+include(":game-detail-api")

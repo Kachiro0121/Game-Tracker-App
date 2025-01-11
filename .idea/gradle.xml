@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -9,6 +10,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/core-api" />
+            <option value="$PROJECT_DIR$/core-factory" />
+            <option value="$PROJECT_DIR$/core-impl" />
+            <option value="$PROJECT_DIR$/game" />
+            <option value="$PROJECT_DIR$/game-api" />
+            <option value="$PROJECT_DIR$/game-detail" />
+            <option value="$PROJECT_DIR$/game-detail-api" />
+            <option value="$PROJECT_DIR$/home" />
+            <option value="$PROJECT_DIR$/home-api" />
+            <option value="$PROJECT_DIR$/main" />
+            <option value="$PROJECT_DIR$/uikit" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

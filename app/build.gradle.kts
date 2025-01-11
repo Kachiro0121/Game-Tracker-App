@@ -1,11 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
 }
 
 android {
     namespace = "com.kachiro.gametrackerapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.kachiro.gametrackerapp"
@@ -36,11 +37,18 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(project(":core-factory"))
+    implementation(project(":game"))
+    implementation(project(":home"))
+    implementation(project(":main"))
+    implementation(project(":game-detail"))
+    implementation(libs.dagger.android)
+    implementation(libs.cicerone.navigation)
+    kapt(libs.dagger.compiler)
 }

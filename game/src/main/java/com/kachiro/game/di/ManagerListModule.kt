@@ -1,0 +1,35 @@
+package com.kachiro.game.di
+
+import android.content.Context
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.VERTICAL
+import com.kachiro.game.halper.ActionHandlerImpl
+import com.kachiro.game.halper.OpenDetailEvenHook
+import com.kachiro.game_api.ActionHandler
+import com.mikepenz.fastadapter.GenericItem
+import com.mikepenz.fastadapter.adapters.FastItemAdapter
+import com.mikepenz.fastadapter.listeners.ClickEventHook
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
+
+@Module
+interface ManagerListModule {
+
+    @Binds
+    fun bindOpenDetailHook(actionHandlerImpl: ActionHandlerImpl): ActionHandler
+
+    companion object{
+
+        @Provides
+        fun provideFastAdapter(): FastItemAdapter<GenericItem> = FastItemAdapter()
+
+        @Provides
+        fun provideClickEventHook(actionHandler: ActionHandler): ClickEventHook<GenericItem> = OpenDetailEvenHook(actionHandler)
+
+        @Provides
+        fun provideLinearLayoutManager(context: Context): LinearLayoutManager = LinearLayoutManager(context, VERTICAL, false)
+
+    }
+
+}
