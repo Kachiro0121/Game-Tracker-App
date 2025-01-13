@@ -18,6 +18,8 @@
 В проекте будут использоваться следующие API для получения данных (возможно не все):
 
 - **[FreeToGame API](https://www.freetogame.com/api-doc)**: API для получения данных об играх.
+
+Не используються
 - **[GiantBomb API](https://www.giantbomb.com/api/documentation/#toc-0-17)**: дополнительная информация об играх.
 - **[IGDB API](https://api-docs.igdb.com/#rate-limits)**: для получения данных о рейтингах и отзывах.
 - **[Jokes API](https://jokes.one/api/joke/#java)**: для добавления случайных шуток в приложение.
