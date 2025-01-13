@@ -1,5 +1,6 @@
 package com.kachiro.game_detail
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
@@ -137,6 +138,16 @@ class GameDetailFragment: BaseFragment<GameDetailScreenBinding>() {
             else -> 0
         }
         binding.iconPlatform.setImageResource(icon)
+        startJumpAnimation(binding.iconPlatform)
+    }
+
+    private fun startJumpAnimation(view: View) {
+        val jumpAnimator = ObjectAnimator.ofFloat(view, "translationY", 0f, -30f, 0f).apply {
+            duration = 500
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.RESTART
+        }
+        jumpAnimator.start()
     }
 
     private fun setButtonOpen(gameUrl: String?) {

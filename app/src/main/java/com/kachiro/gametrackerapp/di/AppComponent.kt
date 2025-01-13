@@ -4,7 +4,7 @@ import android.app.Application
 import com.kachiro.core_api.di.AppProvider
 import com.kachiro.core_api.di.ApplicationComponentProvider
 import com.kachiro.core_api.di.NavigateProvide
-import com.kachiro.core_api.network.NetworkProvider
+import com.kachiro.core_api.di.NetworkProvider
 import com.kachiro.core_factory.CoreProviderFactory
 import com.kachiro.game.di.GameListExternalModule
 import com.kachiro.game_catalog.di.CatalogExternalModule

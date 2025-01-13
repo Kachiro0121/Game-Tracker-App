@@ -1,4 +1,4 @@
-package com.kachiro.core_api.network
+package com.kachiro.core_api.di
 
 import retrofit2.Retrofit
 

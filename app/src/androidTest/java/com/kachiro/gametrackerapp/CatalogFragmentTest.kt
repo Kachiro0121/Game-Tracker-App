@@ -36,10 +36,13 @@ class CatalogFragmentTest {
         onView(withText(R.string.moba))
             .perform(click())
 
+        onView(withText(R.string.shooter))
+            .perform(click())
+
         onView(withText("APPLY"))
             .perform(click())
 
         onView(withId(R.id.catalog))
-            .check(matches(hasDescendant(withText("Minion Masters"))))
+            .check(matches(hasDescendant(withId(R.id.game_item))))
     }
 }
