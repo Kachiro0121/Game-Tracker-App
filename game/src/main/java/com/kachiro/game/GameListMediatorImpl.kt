@@ -12,7 +12,7 @@ class GameListMediatorImpl @Inject constructor(
     private val gameHomeList get() =  FragmentScreen{ GameListFragment.newInstance() }
 
     override fun openScreenGameList() {
-        router.navigateTo(gameHomeList)
+        router.newRootScreen(gameHomeList)
     }
 
 }

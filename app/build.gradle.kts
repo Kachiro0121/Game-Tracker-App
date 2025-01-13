@@ -41,8 +41,12 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.navigation.test)
+    androidTestImplementation(libs.androidx.fragment.test)
+
     implementation(project(":core-factory"))
     implementation(project(":game"))
     implementation(project(":home"))
@@ -50,6 +54,7 @@ dependencies {
     implementation(project(":game-detail"))
     implementation(project(":game-catalog"))
     implementation(project(":uikit"))
+    implementation(project(":base"))
     implementation(libs.dagger.android)
     implementation(libs.cicerone.navigation)
     kapt(libs.dagger.compiler)

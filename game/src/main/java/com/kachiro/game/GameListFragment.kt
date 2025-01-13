@@ -2,11 +2,14 @@ package com.kachiro.game
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.google.android.material.divider.MaterialDividerItemDecoration
@@ -40,10 +43,6 @@ class GameListFragment : BaseFragment<GameListBinding>() {
     lateinit var itemAdapter: FastItemAdapter<GenericItem>
 
     @Inject
-
-    lateinit var layoutManager: RecyclerView.LayoutManager
-
-    @Inject
     lateinit var clickEventHook: ClickEventHook<GenericItem>
 
     private val itemDecoration by lazy {
@@ -58,10 +57,18 @@ class GameListFragment : BaseFragment<GameListBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         GameListComponent.create(applicationComponentProvider = getAppComponent()).inject(this)
+        viewModel.onInit()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.listItem.apply {
+            adapter = itemAdapter.apply {
+                addEventHook(clickEventHook)
+            }
+            addItemDecoration(itemDecoration)
+        }
 
         viewModel.stateList.observe(viewLifecycleOwner) { result ->
             when (result) {
@@ -74,13 +81,6 @@ class GameListFragment : BaseFragment<GameListBinding>() {
             }
         }
 
-        binding.listItem.adapter = itemAdapter.apply {
-            addEventHook(clickEventHook)
-        }
-        binding.listItem.layoutManager = layoutManager
-        binding.listItem.addItemDecoration(itemDecoration)
-
-        viewModel.onInit()
     }
 
     private fun showError(message: String?) {

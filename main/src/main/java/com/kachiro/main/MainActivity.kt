@@ -34,21 +34,11 @@ class MainActivity: AppCompatActivity() {
         MainComponent.create(appComponent).inject(this)
         ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
         viewModel = ViewModelProvider(this, mainViewModelFactory)[MainViewModel::class.java]
-        viewModel.startScreen()
-    }
-
-    override fun onResumeFragments() {
-        super.onResumeFragments()
-        navigatorHolder.setNavigator(navigator)
-    }
-
-    override fun onPause() {
-        navigatorHolder.removeNavigator()
-        super.onPause()
+        viewModel.startScreen(R.id.root_container, supportFragmentManager)
     }
 
     override fun onBackPressed() {
-
+        router.exit()
     }
 
 }

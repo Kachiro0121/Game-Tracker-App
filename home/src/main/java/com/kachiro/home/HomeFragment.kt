@@ -53,6 +53,8 @@ class HomeFragment: BaseFragment<HomeScreenBinding>() {
         }
     }
 
+
+
     override fun onResume() {
         super.onResume()
         navigatorHolder.setNavigator(navigator)

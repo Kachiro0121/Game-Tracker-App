@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kachiro.game_catalog.R
 import com.kachiro.game_catalog.dto.Filters
 import com.kachiro.game_catalog.repository.Repository
 import com.kachiro.game_detail_api.GameDetailMediator

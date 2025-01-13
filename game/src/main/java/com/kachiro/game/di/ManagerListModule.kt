@@ -13,6 +13,7 @@ import com.mikepenz.fastadapter.listeners.ClickEventHook
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import javax.inject.Scope
 
 @Module
 interface ManagerListModule {
@@ -28,9 +29,7 @@ interface ManagerListModule {
         @Provides
         fun provideClickEventHook(actionHandler: ActionHandler): ClickEventHook<GenericItem> = OpenDetailEvenHook(actionHandler)
 
-        @Provides
-        fun provideLinearLayoutManager(context: Context): RecyclerView.LayoutManager = LinearLayoutManager(context, VERTICAL, false)
-
     }
 
 }
+

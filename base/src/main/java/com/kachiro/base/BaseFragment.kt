@@ -13,7 +13,7 @@ abstract class BaseFragment<VB: ViewBinding>: Fragment() {
     protected abstract fun getViewBinding(): VB
 
     private var _binding: VB? = null
-    protected val binding get() = _binding!!
+    val binding get() = _binding!!
 
     protected fun getAppComponent() = (requireActivity().application as AppWithApplicationComponent).getApplicationComponentProvider()
 

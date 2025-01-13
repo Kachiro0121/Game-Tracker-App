@@ -47,9 +47,6 @@ class CatalogFragment: BaseFragment<CatalogScreenBinding>() {
     @Inject
     lateinit var adapter: FastItemAdapter<GenericItem>
 
-    @Inject
-    lateinit var layoutManager: RecyclerView.LayoutManager
-
     private val itemDecorationVertical by lazy {
         MaterialDividerItemDecoration(requireContext(), VERTICAL).apply {
             dividerThickness = 16.dp
@@ -76,7 +73,6 @@ class CatalogFragment: BaseFragment<CatalogScreenBinding>() {
 
         binding.catalog.apply {
             adapter = this@CatalogFragment.adapter
-            layoutManager = this@CatalogFragment.layoutManager
             addItemDecoration(itemDecorationVertical)
             addItemDecoration(itemDecorationHorizontal)
         }

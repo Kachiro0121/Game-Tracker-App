@@ -1,18 +1,18 @@
 package com.kachiro.home
 
+import androidx.annotation.IdRes
+import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.github.terrakok.cicerone.Router
+import com.github.terrakok.cicerone.Screen
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.kachiro.home_api.HomeMediator
 import javax.inject.Inject
 
-class HomeMediatorImpl @Inject constructor(
-    private val router: Router
-) : HomeMediator {
+class HomeMediatorImpl @Inject constructor() : HomeMediator {
 
-    val home get() = FragmentScreen { HomeFragment.newInstance() }
-
-    override fun startHomeScreen() {
-        router.replaceScreen(home)
+    override fun startHomeScreen(@IdRes container: Int, fragmentManager: FragmentManager) {
+        fragmentManager.beginTransaction().replace(container, HomeFragment.newInstance()).commitNow()
     }
 
 }

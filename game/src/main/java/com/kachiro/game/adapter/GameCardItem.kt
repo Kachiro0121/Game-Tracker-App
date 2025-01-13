@@ -22,7 +22,7 @@ class GameCardItem(model: Game) : ModelAbstractItem<Game, GameCardItem.ViewHolde
 
     class ViewHolder(view: View) : FastAdapter.ViewHolder<GameCardItem>(view) {
 
-        private val binding = CardGameHalfBinding.bind(itemView)
+        val binding = CardGameHalfBinding.bind(itemView)
 
         override fun bindView(item: GameCardItem, payloads: List<Any>) {
             binding.title.text = item.model.title

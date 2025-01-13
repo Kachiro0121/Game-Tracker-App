@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import com.bumptech.glide.Glide
+import com.github.terrakok.cicerone.Router
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.kachiro.base.BaseFragment
 import com.kachiro.base.dp
@@ -80,6 +81,10 @@ class GameDetailFragment: BaseFragment<GameDetailScreenBinding>() {
 
         viewModel.detail.observe(viewLifecycleOwner) { detail ->
             setDetailView(detail)
+        }
+
+        binding.buttonBack.setOnClickListener {
+            requireActivity().onBackPressed()
         }
 
         init()

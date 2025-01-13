@@ -12,6 +12,8 @@
         android:clipToPadding="false"
         android:paddingVertical="16dp"
         android:paddingStart="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

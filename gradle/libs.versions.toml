@@ -16,16 +16,31 @@ fastadapter = "5.7.0"
 navigation = "2.8.0"
 cicerone-navigation = "7.1"
 okhttp-logging = "4.12.0"
+junitJupiter = "5.8.1"
+mockk = "1.13.5"
+core-testing = "2.2.0"
+coroutines-test = "1.7.3"
+robolectric = "4.7.3"
+junitKtx = "1.2.1"
+androidx-navigation-test = "2.8.5"
+fragment-testing = "1.8.5"
 
 [libraries]
-
 #test
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines-test" }
+androidx-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "core-testing" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+androidx-navigation-test = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidx-navigation-test" }
+androidx-fragment-test = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragment-testing" }
 
 #androidx
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment_version" }
 androidx-lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "androidxLifecycleVersion" }

@@ -23,7 +23,7 @@ class GameCardRecommendItem(model: Game) : ModelAbstractItem<Game, GameCardRecom
 
     class ViewHolder(view: View) : FastAdapter.ViewHolder<GameCardRecommendItem>(view) {
 
-        private val binding = CardGameBinding.bind(itemView)
+        val binding = CardGameBinding.bind(itemView)
 
         override fun bindView(item: GameCardRecommendItem, payloads: List<Any>) {
             binding.title.text = item.model.title

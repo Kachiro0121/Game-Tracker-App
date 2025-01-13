@@ -18,9 +18,6 @@ interface ManagerListModule {
         @Provides
         fun provideFastAdapter(): FastItemAdapter<GenericItem> = FastItemAdapter()
 
-        @Provides
-        fun provideLinearLayoutManager(context: Context): RecyclerView.LayoutManager = GridLayoutManager(context, 2)
-
     }
 
 }
