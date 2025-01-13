@@ -48,6 +48,7 @@ dependencies {
     implementation(project(":home"))
     implementation(project(":main"))
     implementation(project(":game-detail"))
+    implementation(project(":game-catalog"))
     implementation(project(":uikit"))
     implementation(libs.dagger.android)
     implementation(libs.cicerone.navigation)

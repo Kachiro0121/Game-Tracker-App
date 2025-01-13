@@ -47,7 +47,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+    implementation(libs.fastadapter)
     implementation(project(":core-api"))
+    implementation(project(":uikit"))
     api(libs.androidx.lifecycle.runtime)
-    api(libs.androidx.navigation)
+
 }

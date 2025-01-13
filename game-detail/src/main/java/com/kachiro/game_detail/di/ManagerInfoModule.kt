@@ -11,7 +11,7 @@ import dagger.Provides
 import javax.inject.Qualifier
 
 @Module
-class ManagerInfoModule {
+interface ManagerInfoModule {
 
     companion object{
 

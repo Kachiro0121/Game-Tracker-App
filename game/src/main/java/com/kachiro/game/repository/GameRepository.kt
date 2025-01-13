@@ -1,6 +1,6 @@
 package com.kachiro.game.repository
 
-import com.kachiro.game.dto.Game
+import com.kachiro.core_api.dto.Game
 import com.kachiro.game.dto.GameCategory
 
 interface GameRepository {

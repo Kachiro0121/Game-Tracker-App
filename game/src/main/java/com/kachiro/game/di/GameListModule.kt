@@ -27,7 +27,7 @@ interface GameListModule {
         fun provideGameApiService(retrofit: Retrofit): GameApiService = retrofit.create(GameApiService::class.java)
 
         @Provides
-        fun provideMediator1(map: Map<Class<*>, @JvmSuppressWildcards Provider<Any>>): GameDetailMediator {
+        fun provideMediatorGameDetail(map: Map<Class<*>, @JvmSuppressWildcards Provider<Any>>): GameDetailMediator {
             return map[GameDetailMediator::class.java]!!.get() as GameDetailMediator
         }
 

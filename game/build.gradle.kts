@@ -52,6 +52,7 @@ dependencies {
     implementation(project(":core-api"))
     implementation(project(":base"))
     implementation(project(":game-detail-api"))
+    implementation(project(":uikit"))
 
     implementation(libs.androidx.lifecycle.livedata)
     implementation(libs.androidx.lifecycle.viewmodel)

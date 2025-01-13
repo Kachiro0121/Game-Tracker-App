@@ -2,6 +2,7 @@ package com.kachiro.home.di
 
 import androidx.lifecycle.ViewModelProvider
 import com.kachiro.game_api.GameListMediator
+import com.kachiro.game_catalog_api.CatalogMediator
 import com.kachiro.home.viewmodel.HomeViewModelFactory
 import dagger.Binds
 import dagger.Module
@@ -17,8 +18,13 @@ interface HomeModule {
     companion object{
 
         @Provides
-        fun provideMediator1(map: Map<Class<*>, @JvmSuppressWildcards Provider<Any>>): GameListMediator {
+        fun provideMediatorGameList(map: Map<Class<*>, @JvmSuppressWildcards Provider<Any>>): GameListMediator {
             return map[GameListMediator::class.java]!!.get() as GameListMediator
+        }
+
+        @Provides
+        fun provideMediatorCatalog(map: Map<Class<*>, @JvmSuppressWildcards Provider<Any>>): CatalogMediator {
+            return map[CatalogMediator::class.java]!!.get() as CatalogMediator
         }
 
     }

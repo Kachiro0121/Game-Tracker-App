@@ -4,7 +4,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.kachiro.game.R
 import com.kachiro.game.databinding.CardGameHalfBinding
-import com.kachiro.game.dto.Game
+import com.kachiro.core_api.dto.Game
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.items.ModelAbstractItem
 

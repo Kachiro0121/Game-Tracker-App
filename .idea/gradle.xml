@@ -16,6 +16,8 @@
             <option value="$PROJECT_DIR$/core-impl" />
             <option value="$PROJECT_DIR$/game" />
             <option value="$PROJECT_DIR$/game-api" />
+            <option value="$PROJECT_DIR$/game-catalog" />
+            <option value="$PROJECT_DIR$/game-catalog-api" />
             <option value="$PROJECT_DIR$/game-detail" />
             <option value="$PROJECT_DIR$/game-detail-api" />
             <option value="$PROJECT_DIR$/home" />

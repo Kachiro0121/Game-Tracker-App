@@ -12,7 +12,7 @@ class HomeMediatorImpl @Inject constructor(
     val home get() = FragmentScreen { HomeFragment.newInstance() }
 
     override fun startHomeScreen() {
-        router.newRootScreen(home)
+        router.replaceScreen(home)
     }
 
 }

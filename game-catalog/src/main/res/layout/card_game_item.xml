@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="24dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.88"
+            android:background="@drawable/backgroung_card_info" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentRight="true"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/releaseDate"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

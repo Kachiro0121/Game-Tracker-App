@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mmorpg">mmorpg</string>
+    <string name="shooter">shooter</string>
+    <string name="strategy">strategy</string>
+    <string name="moba">moba</string>
+    <string name="pc">PC</string>
+    <string name="browser">Browser</string>
+    <string name="filter_options">Filter Options</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+</resources>
