@@ -9,10 +9,6 @@ class HomeViewModel constructor(
     private val catalogMediator: CatalogMediator
 ) : ViewModel() {
 
-    init {
-        gameScreen()
-    }
-
     fun gameScreen() {
         gameListMediator.openScreenGameList()
     }

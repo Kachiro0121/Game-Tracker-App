@@ -1,5 +1,6 @@
 package com.kachiro.home
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
@@ -26,7 +27,11 @@ class HomeFragment: BaseFragment<HomeScreenBinding>() {
     @Inject
     lateinit var navigatorHolder: NavigatorHolder
 
+    @Inject
+    lateinit var sharedPreferences: SharedPreferences
+
     companion object{
+        private const val ID_SELECT_NAVIGATION = "ID_SELECT_NAVIGATION"
         fun newInstance() = HomeFragment()
     }
 
@@ -44,6 +49,7 @@ class HomeFragment: BaseFragment<HomeScreenBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.mainNavigationView.setOnItemSelectedListener { item ->
+            sharedPreferences.edit().putInt(ID_SELECT_NAVIGATION, item.itemId).apply()
             when (item.itemId) {
                 R.id.navigation_home -> viewModel.gameScreen()
                 R.id.navigation_catalog -> viewModel.catalogScreen()
@@ -51,6 +57,8 @@ class HomeFragment: BaseFragment<HomeScreenBinding>() {
             }
             true
         }
+
+        binding.mainNavigationView.selectedItemId = sharedPreferences.getInt(ID_SELECT_NAVIGATION, R.id.navigation_home)
     }
 
 

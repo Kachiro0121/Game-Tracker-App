@@ -5,6 +5,7 @@ import com.kachiro.core_api.di.AppProvider
 import com.kachiro.core_api.di.ApplicationComponentProvider
 import com.kachiro.core_api.di.NavigateProvide
 import com.kachiro.core_api.di.NetworkProvider
+import com.kachiro.core_api.di.SharedPreferenceProvider
 import com.kachiro.core_factory.CoreProviderFactory
 import com.kachiro.game.di.GameListExternalModule
 import com.kachiro.game_catalog.di.CatalogExternalModule
@@ -15,7 +16,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    dependencies = [AppProvider::class, NetworkProvider::class, NavigateProvide::class],
+    dependencies = [AppProvider::class, NetworkProvider::class, NavigateProvide::class, SharedPreferenceProvider::class],
     modules = [HomeExternalModule::class, GameListExternalModule::class, GameDetailExternalModule::class, CatalogExternalModule::class]
 )
 interface ApplicationComponent : ApplicationComponentProvider {
@@ -26,6 +27,7 @@ interface ApplicationComponent : ApplicationComponentProvider {
             .navigateProvide(CoreProviderFactory.createNavigateProvider())
             .appProvider(ApplicationContextComponent.create(application))
             .networkProvider(CoreProviderFactory.createNetworkProvider())
+            .sharedPreferenceProvider(CoreProviderFactory.createSharedPreference(application))
             .build()
 
     }
