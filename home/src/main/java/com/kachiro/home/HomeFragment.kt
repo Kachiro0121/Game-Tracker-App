@@ -10,12 +10,13 @@ import com.kachiro.base.BaseFragment
 import com.kachiro.core_api.di.AppWithApplicationComponent
 import com.kachiro.home.databinding.HomeScreenBinding
 import com.kachiro.home.di.HomeComponent
+import com.kachiro.home.help.AnimatedFragmentNavigator
 import com.kachiro.home.viewmodel.HomeViewModel
 import javax.inject.Inject
 
 class HomeFragment: BaseFragment<HomeScreenBinding>() {
 
-    private val navigator by lazy { AppNavigator(requireActivity(), R.id.home_container, childFragmentManager) }
+    private val navigator by lazy { AnimatedFragmentNavigator(requireActivity(), R.id.home_container, childFragmentManager) }
 
     override fun getViewBinding(): HomeScreenBinding = HomeScreenBinding.inflate(layoutInflater)
 
