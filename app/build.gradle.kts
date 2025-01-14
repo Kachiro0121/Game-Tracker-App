@@ -48,13 +48,15 @@ dependencies {
     androidTestImplementation(libs.androidx.fragment.test)
 
     implementation(project(":core-factory"))
+    implementation(project(":uikit"))
+    implementation(project(":base"))
+
     implementation(project(":game"))
     implementation(project(":home"))
     implementation(project(":main"))
     implementation(project(":game-detail"))
     implementation(project(":game-catalog"))
-    implementation(project(":uikit"))
-    implementation(project(":base"))
+    implementation(project(":imageViewer"))
     implementation(libs.dagger.android)
     implementation(libs.cicerone.navigation)
     kapt(libs.dagger.compiler)

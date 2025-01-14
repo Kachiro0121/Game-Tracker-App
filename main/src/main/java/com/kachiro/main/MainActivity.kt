@@ -1,6 +1,7 @@
 package com.kachiro.main
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.github.terrakok.cicerone.NavigatorHolder
@@ -18,12 +19,7 @@ class MainActivity: AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
 
     @Inject
-    lateinit var navigatorHolder: NavigatorHolder
-
-    @Inject
     lateinit var router: Router
-
-    private val navigator by lazy { AppNavigator(this, R.id.root_container) }
 
     @Inject
     lateinit var mainViewModelFactory: MainViewModelFactory
@@ -35,10 +31,12 @@ class MainActivity: AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
         viewModel = ViewModelProvider(this, mainViewModelFactory)[MainViewModel::class.java]
         viewModel.startScreen(R.id.root_container, supportFragmentManager)
-    }
 
-    override fun onBackPressed() {
-        router.exit()
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                router.exit()
+            }
+        })
     }
 
 }

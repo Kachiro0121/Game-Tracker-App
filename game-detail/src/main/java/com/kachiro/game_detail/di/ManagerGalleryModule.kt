@@ -22,10 +22,6 @@ interface ManagerGalleryModule {
         @GalleryList
         fun provideFastAdapter(): FastItemAdapter<GenericItem> = FastItemAdapter()
 
-        @Provides
-        @GalleryList
-        fun provideLinearLayoutManager(context: Context): RecyclerView.LayoutManager = LinearLayoutManager(context, HORIZONTAL, false)
-
     }
 
 }

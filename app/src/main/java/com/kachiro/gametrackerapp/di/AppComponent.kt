@@ -11,13 +11,14 @@ import com.kachiro.game.di.GameListExternalModule
 import com.kachiro.game_catalog.di.CatalogExternalModule
 import com.kachiro.game_detail.di.GameDetailExternalModule
 import com.kachiro.home.di.HomeExternalModule
+import com.kachiro.imageviewer.di.ImageViewerExternalModule
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
 @Component(
     dependencies = [AppProvider::class, NetworkProvider::class, NavigateProvide::class, SharedPreferenceProvider::class],
-    modules = [HomeExternalModule::class, GameListExternalModule::class, GameDetailExternalModule::class, CatalogExternalModule::class]
+    modules = [HomeExternalModule::class, GameListExternalModule::class, GameDetailExternalModule::class, CatalogExternalModule::class, ImageViewerExternalModule::class]
 )
 interface ApplicationComponent : ApplicationComponentProvider {
 

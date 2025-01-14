@@ -24,6 +24,7 @@ robolectric = "4.7.3"
 junitKtx = "1.2.1"
 androidx-navigation-test = "2.8.5"
 fragment-testing = "1.8.5"
+photoview = "2.0.0"
 
 [libraries]
 #test
@@ -79,6 +80,9 @@ fastadapter-utils = { group = "com.mikepenz", name = "fastadapter-extensions-uti
 
 #Navigate
 cicerone-navigation = { group = "com.github.terrakok", name = "cicerone", version.ref = "cicerone-navigation" }
+
+#ImageView
+photoview = { group = "com.github.chrisbanes", name = "PhotoView", version.ref = "photoview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

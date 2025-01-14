@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import com.bumptech.glide.Glide
-import com.github.terrakok.cicerone.Router
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.kachiro.base.BaseFragment
 import com.kachiro.base.dp
@@ -52,15 +51,7 @@ class GameDetailFragment: BaseFragment<GameDetailScreenBinding>() {
 
     @Inject
     @InfoList
-    lateinit var managerInfo: RecyclerView.LayoutManager
-
-    @Inject
-    @InfoList
     lateinit var adapterInfo: FastItemAdapter<GenericItem>
-
-    @Inject
-    @GalleryList
-    lateinit var managerGallery: RecyclerView.LayoutManager
 
     @Inject
     @GalleryList
@@ -103,18 +94,19 @@ class GameDetailFragment: BaseFragment<GameDetailScreenBinding>() {
             dividerThickness = 16.dp
             dividerColor = Color.TRANSPARENT
         }
-        binding.infoGameList.apply {
-            layoutManager = managerInfo
-            adapter = adapterInfo
-        }
 
+        binding.infoGameList.adapter = adapterInfo
 
         binding.gallery.apply {
             title.text = getString(R.string.gallery)
             list.apply {
-                layoutManager = managerGallery
                 adapter = adapterGallery
                 addItemDecoration(dividerGallery)
+            }
+            adapterGallery.onClickListener = { _,_, item,_ ->
+                val id = (item as ImageItem).model.id
+                viewModel.openImageView(id)
+                false
             }
         }
     }

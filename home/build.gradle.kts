@@ -54,4 +54,5 @@ dependencies {
     implementation(project(":core-api"))
     implementation(project(":game-api"))
     implementation(project(":game-catalog-api"))
+    implementation(project(":uikit"))
 }

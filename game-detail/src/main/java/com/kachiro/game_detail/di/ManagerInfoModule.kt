@@ -19,10 +19,6 @@ interface ManagerInfoModule {
         @InfoList
         fun provideFastAdapter(): FastItemAdapter<GenericItem> = FastItemAdapter()
 
-        @Provides
-        @InfoList
-        fun provideLinearLayoutManager(context: Context): RecyclerView.LayoutManager = LinearLayoutManager(context, VERTICAL, false)
-
     }
 
 }

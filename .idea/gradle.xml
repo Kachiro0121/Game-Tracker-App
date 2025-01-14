@@ -22,6 +22,8 @@
             <option value="$PROJECT_DIR$/game-detail-api" />
             <option value="$PROJECT_DIR$/home" />
             <option value="$PROJECT_DIR$/home-api" />
+            <option value="$PROJECT_DIR$/imageViewer" />
+            <option value="$PROJECT_DIR$/imageViewer-api" />
             <option value="$PROJECT_DIR$/main" />
             <option value="$PROJECT_DIR$/uikit" />
           </set>

@@ -17,6 +17,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
@@ -37,3 +38,5 @@ include(":game-detail")
 include(":game-detail-api")
 include(":game-catalog")
 include(":game-catalog-api")
+include(":imageViewer")
+include(":imageViewer-api")

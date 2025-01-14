@@ -10,7 +10,6 @@ android {
 
     defaultConfig {
         minSdk = 26
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -38,8 +37,7 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.junit.ktx)
+    
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
     testImplementation(libs.robolectric)
@@ -55,10 +53,11 @@ dependencies {
 
     kapt(libs.dagger.compiler)
 
+    api(project(":game-detail-api"))
+
     implementation(project(":base"))
     implementation(project(":core-api"))
     implementation(project(":uikit"))
-    api(project(":game-detail-api"))
-
+    implementation(project(":imageViewer-api"))
 
 }
