@@ -2,6 +2,13 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("kapt")
+    id("com.kachiro.publishing")
+}
+
+publishingConfig {
+    track = "beta"
+    userFraction = 0.5
+    releaseNotes = "Новое обновление включает улучшения."
 }
 
 android {
@@ -34,6 +41,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {

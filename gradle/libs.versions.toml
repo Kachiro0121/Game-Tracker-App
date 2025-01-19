@@ -25,6 +25,7 @@ junitKtx = "1.2.1"
 androidx-navigation-test = "2.8.5"
 fragment-testing = "1.8.5"
 photoview = "2.0.0"
+gradle-publisher = "3.8.0"
 
 [libraries]
 #test
@@ -88,4 +89,5 @@ photoview = { group = "com.github.chrisbanes", name = "PhotoView", version.ref =
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+gradle-publisher = { id = "com.github.triplet.play", version.ref = "gradle-publisher" }
 
